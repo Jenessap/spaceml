@@ -1,24 +1,14 @@
-import sys
-sys.dont_write_bytecode = True
 
 from PIL import Image
 import streamlit as st
 
 local_viewed = []
-button_clicked = False
 
 class Question:
 	def __init__(self, image_name, callback):
 		self.image_name = image_name
 		self.callback = callback
 
-	# def render_accept_button(self):
-	# 	if self.accept:
-	# 		self.on_accept_click()
-
-	# def render_reject_button(self):
-	# 	if self.reject:
-	# 		self.on_reject_click()
 
 	def on_accept_click(self):
 		# st.write("Image placed in the positive folder.")
@@ -48,9 +38,4 @@ class Question:
 			self.on_reject_click()
 			self.on_accept_click()
 
-			# # Display the reject button
-			# self.render_reject_button()
-
-			# # Display the accept button
-			# self.render_accept_button()
 
